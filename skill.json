@@ -1,0 +1,45 @@
+{
+  "name": "customer-segmentation-skill",
+  "version": "1.0.0",
+  "description": "Segment e-commerce customers into behavioral groups using K-means clustering on RFM features. Returns labeled segments with actionable marketing strategies.",
+  "author": "alphaparkinc",
+  "category": "analytics",
+  "tags": [
+    "segmentation",
+    "clustering",
+    "RFM",
+    "customer-analytics",
+    "personalization"
+  ],
+  "inputs": {
+    "customers": {
+      "type": "array",
+      "description": "Customer records with recency_days, frequency, monetary_value, and optional demographic fields."
+    },
+    "n_segments": {
+      "type": "integer",
+      "description": "Number of segments to create.",
+      "default": 4
+    },
+    "features": {
+      "type": "array",
+      "description": "Features to use for clustering (default: recency, frequency, monetary)."
+    }
+  },
+  "outputs": {
+    "segments": {
+      "type": "array",
+      "description": "Segment definitions with customer counts, feature averages, labels, and marketing strategies."
+    },
+    "customers": {
+      "type": "array",
+      "description": "Customer records with assigned segment labels."
+    },
+    "silhouette_score": {
+      "type": "number",
+      "description": "Clustering quality score (higher is better)."
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
