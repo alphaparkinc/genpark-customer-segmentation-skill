@@ -1,4 +1,4 @@
-# customer-segmentation-skill
+# genpark-customer-segmentation-skill
 
 > **GenPark AI Agent Skill** — Segment e-commerce customers into behavioral groups using K-means clustering on RFM features.
 
